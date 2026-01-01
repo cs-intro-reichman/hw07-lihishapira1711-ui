@@ -8,6 +8,10 @@ public class IntToBin {
 
     public static String toBinary(int x) {
         String s = "";
+        if (x==0)
+        {
+            return "0";
+        }
         return toBinary (x,s);
     }
     public static String toBinary(int x, String s) {
@@ -23,6 +27,6 @@ public class IntToBin {
            {
             s= "1" + s;
            }
-        return toBinary(x/2) + s;
+        return toBinary(x/2,s);
     }    
  }
