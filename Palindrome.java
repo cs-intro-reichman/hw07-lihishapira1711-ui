@@ -1,11 +1,12 @@
 /** Checks if a given string is a palindrome. */
 public class Palindrome {
 
-	public static void main(String[]args) {
-    	System.out.println(isPalindrome(args[0]));
-
+	public static void main(String[] args) {
+    In in = new In();
+    String s = in.readString();
+    System.out.println(isPalindrome(s));
     }
-	
+
 	/** Checks if the given string is a palindrome. */
 	public static boolean isPalindrome(String s) {
 		int start=0;
@@ -13,7 +14,7 @@ public class Palindrome {
 		return isPalindrome (s,start,end);
     }
 	public static boolean isPalindrome(String s, int start, int end) {
-		if (start==end || end == -1)
+		if (start>=end)
 		{
 			return true;
 		}
