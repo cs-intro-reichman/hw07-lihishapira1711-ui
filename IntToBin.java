@@ -1,4 +1,4 @@
-/** Returns the binary representation of a given integer. */
+
 public class IntToBin {
 
     public static void main(String[] args) {
@@ -6,9 +6,23 @@ public class IntToBin {
         System.out.println("Binary representation of " + x + " is: " + toBinary(x));
     }
 
-    /** Returns the binary representation of the given integer, as a string of 0's and 1's.  */
     public static String toBinary(int x) {
-        //// Replace the following statement with your code
-        return "";
+        String s = "";
+        return toBinary (x,s);
+    }
+    public static String toBinary(int x, String s) {
+        if (x==0)
+           {
+              return s;
+           }
+           if (x%2==0)
+           {
+         s = "0" + s;
+           }
+           else
+           {
+            s= "1" + s;
+           }
+        return toBinary(x/2) + s;
     }    
  }
